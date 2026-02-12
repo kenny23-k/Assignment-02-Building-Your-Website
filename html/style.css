@@ -1,0 +1,280 @@
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/*INDEX SECTION*/
+
+/* colour and alignments*/
+h1 {
+    text-align: center;     
+    font-size: 70pt;       
+    margin-top: 50px;       
+    color: rgb(255, 255, 255);           
+}
+
+p {
+    text-align: center
+}
+
+body {
+    color: rgb(0, 0, 0); 
+    font-family: sans-serif;
+    margin: 0;
+}
+
+p {
+    font-size: 15pt
+}
+
+h2, h4, h5, h6 {
+    color: rgb(125, 62, 25);
+    text-align: center;
+    font-size: 50pt
+}
+
+h3 {
+    color: rgb(125, 62, 25);
+    font-size: 20pt
+}
+
+header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 20px;
+    border-bottom: 0.5px solid #e0e0e0; 
+}
+
+nav ul {
+    display: flex; 
+    gap: 20px; 
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: brown;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline; 
+}
+
+/* Making a box for "Study and Focus", "Meet and Connect", "Relax and Unwind"*/
+.usage-container {
+    display: flex;
+    justify-content: center;
+    gap: 100pt;
+    margin-top: 150pt;
+}
+
+/*centered images for usage*/
+.image-gallery {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10pt;
+}
+
+.small-stack{
+    display: flex;
+    flex-direction: column;
+    gap: 10pt;
+}
+
+.explore-space{
+    width: 500px;
+    height: auto;
+}
+
+.explore-space-two{
+    width: 235px;
+    height: auto;
+}
+
+.explore-space-three{
+    width: 235px;
+    height: auto;
+}
+
+/* blocks of colours */
+
+section {
+    background-color: 	#B87333; 
+    width: 100%;                      
+    margin: 30px auto;       
+    padding: 200px;                
+}
+
+.hero{
+    background-image: url('hero-bg.jpg');
+    padding: 300px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.one{
+    background-color: #ffffff;
+}
+
+.two{
+    background-color: 	#DAA06D;
+}
+
+.three{
+    background-color: #B87333;
+}
+
+.four{
+    background-color: 	#DAA06D;
+}
+
+.menu{
+    background-color: 	#B87333; 
+    width: 100%;                      
+    margin: 30px auto;       
+    padding: 15px;              
+}
+
+/* both codes below is from chat gpt to add icons ----*/
+.usage-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.usage-item i {
+    font-size: 60pt;
+    margin-bottom: 20px;
+    color: rgb(125, 62, 25);
+}
+/*-----------------------------------------------------*/
+
+/* This code is also from chat gpt its for the testimonials */
+.testimonial-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 80px;
+    flex-wrap: wrap;
+}
+
+.testimonial-card {
+    background-color: rgb(125, 62, 25);
+    padding: 40px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.quote {
+    font-style: italic;
+    font-size: 18pt;
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.author {
+    font-size: 16pt;
+    color: #777;
+    text-align: left;
+}
+/*----------------------------------------------------------------*/
+
+/*ABOUT SECTION*/
+
+.hero-page-two{
+    background-color: 	#ffffff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;                      
+    margin: 30px auto;       
+    padding: 100px 50px;   
+}
+
+.hero-page-two h2{
+    font-size: 60pt;
+}
+
+.box{
+    width: 40px;
+    height: 40px;
+    background-color: #B87333;
+    border-radius: 5px;
+}
+
+.paragraph-page-two p{
+    margin-left: 50px;
+    margin-right: auto;
+    width: 80%;
+}
+
+/* CONTACT SECTION*/
+
+.hero-page-three{
+    background-color:#B87333;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 20px;
+    width: 100%;                      
+    margin: 30px auto;       
+    padding: 100px 50px;   
+}
+
+.hero-page-three h1{
+    font-size: 60pt;
+}
+
+.box{
+    width: 40px;
+    height: 40px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+
+
+.contact-form-section {
+    background-color:#B87333; 
+    width: 80%;
+    margin: 50px auto;
+    padding: 40px;
+    border-radius: 25px;
+}
+
+.contact-form-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.contact-form-section li {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+button[type="submit"] {
+    background-color: #915925;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
