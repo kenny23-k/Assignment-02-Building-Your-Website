@@ -29,6 +29,17 @@ Text Content: All of the texts used werent mine, i used the same text figma used
 
 But with ai i learned new ways to code and get the cool results i want so it was more of a learning tool rather than just copy pasting things.
 
+Following assignement 2, I made changes to the website:
+
+1. Added footer
+2. Added a CSS grid for the testimonial layout
+3. Added article semantic for testimonials
+4. Added alt attribute for images
+5. Added viewport meta tag
+6. Added images files to repo
+7. Added text to About Page
+8. Made sure theres a live page
+
 Image credits:
 
 #https://ca.pinterest.com/pin/4592756948935887616/
@@ -38,3 +49,4 @@ Image credits:
 #https://ca.pinterest.com/pin/3377768466717808/
 
 #https://ca.pinterest.com/pin/74450200084203378/
+
