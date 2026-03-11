@@ -7,7 +7,7 @@
 /* colour and alignments*/
 h1 {
     text-align: center;     
-    font-size: 70pt;       
+    font-size: 3rem;       
     margin-top: 50px;       
     color: rgb(255, 255, 255);           
 }
@@ -29,12 +29,12 @@ p {
 h2, h4, h5, h6 {
     color: rgb(125, 62, 25);
     text-align: center;
-    font-size: 50pt
+    font-size: 2.4rem
 }
 
 h3 {
     color: rgb(125, 62, 25);
-    font-size: 20pt
+    font-size: 2.0rem
 }
 
 header {
@@ -67,7 +67,7 @@ nav a:hover {
 .usage-container {
     display: flex;
     justify-content: center;
-    gap: 100pt;
+    gap: 2rem;
     margin-top: 150pt;
 }
 
@@ -86,17 +86,20 @@ nav a:hover {
 }
 
 .explore-space{
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
     height: auto;
 }
 
 .explore-space-two{
-    width: 235px;
+    width: 100%;
+    max-width: 235px;
     height: auto;
 }
 
 .explore-space-three{
-    width: 235px;
+    width: 100%;
+    max-width: 235px;
     height: auto;
 }
 
@@ -106,12 +109,12 @@ section {
     background-color: 	#B87333; 
     width: 100%;                      
     margin: 30px auto;       
-    padding: 200px;                
+    padding: 4rem 2rem;                
 }
 
 .hero{
     background-image: url('hero-bg.jpg');
-    padding: 300px;
+    padding: 6rem 2rem;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -289,7 +292,7 @@ button[type="submit"] {
     position: absolute;
     top: 20px;
     right: 20px;
-    z-index: 9999;
+    z-index: 2000;
     background: url('hamburger.png') no-repeat;
     background-size: contain;
     width: 2rem;
@@ -312,6 +315,7 @@ button[type="submit"] {
 
 .primary-navigation[data-visible="true"] {
     transform: translateX(0);
+    list-style: none;
 }
 
 .mobile-nav-toggle[aria-expanded="true"] {
@@ -333,4 +337,27 @@ button[type="submit"] {
         background-color: transparent;
         transition: none;
     }
+}
+
+
+@media (max-width: 800px) {
+
+    .usage-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .image-gallery {
+        flex-direction: column;
+    }
+
+    .small-stack {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .testimonial-container {
+        grid-template-columns: 1fr;
+    }
+
 }
