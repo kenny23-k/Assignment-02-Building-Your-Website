@@ -211,12 +211,11 @@ section {
     border-radius: 5px;
 }
 
-.paragraph-page-two p{
-    width: 90%;
-    margin: 0 auto 30px auto;
-    font-size: 18pt;
-    text-align: left;
-    color: #ffffff;
+.paragraph-page-two p {
+    width: 100%;
+    margin: 0 0 1rem 0;
+    padding: 0 1rem;
+    box-sizing: border-box;
 }
 
 /* CONTACT SECTION*/
@@ -246,11 +245,8 @@ section {
 
 
 .contact-form-section {
-    background-color:#B87333; 
-    width: 80%;
-    margin: 50px auto;
-    padding: 40px;
-    border-radius: 25px;
+    width: 95%;
+    padding: 1rem;
 }
 
 .contact-form-section ul {
@@ -346,40 +342,48 @@ button[type="submit"] {
         gap: 2rem;
     }
 
-    .image-gallery {
-        flex-direction: column;
-    }
+    .image-gallery img {
+        width: 100%;
+        height: auto;
+        max-width: 100%;
+    }   
 
-    .small-stack {
-        flex-direction: row;
-        justify-content: center;
+
+    .small-stack img {
+        width: 48%; 
+        max-width: 100%;
     }
 
     .testimonial-container {
         grid-template-columns: 1fr;
+        gap: 1rem;
     }
 
 }
 
 @media (max-width: 600px) {
-    .hero-page-two, .hero-page-three {
-        padding: 80px 20px; /* smaller padding on phones */
-    }
+    .hero, .hero-page-two, .hero-page-three {
+        padding: 6rem 2rem; /* reduce horizontal padding for all devices */
+}
 
     .hero-page-two h2, .hero-page-three h1 {
-        font-size: 36pt; /* scale down big text */
+        font-size: 3rem; /* scale down big text */
     }
 }
 
 @media (max-width: 800px) {
     .testimonial-card {
-        width: 100%; /* allow it to fit mobile */
+        width: 100%;
+        max-width: 100%;
+        box-sizing: border-box;
     }
 }
 
 @media (max-width: 600px) {
-    .contact-form-section {
-        width: 95%;
-        padding: 20px;
+    .hero, .hero-page-two, .hero-page-three {
+        padding: 4rem 1rem;
+    }
+    .hero-page-two h2, .hero-page-three h1 {
+        font-size: 28pt;
     }
 }
