@@ -290,7 +290,7 @@ button[type="submit"] {
     top: 20px;
     right: 20px;
     z-index: 9999;
-    background: url('hamburger-icon.svg') no-repeat;
+    background: url('hamburger.png') no-repeat;
     width: 30px;
     height: 30px;
     border: 0;
@@ -313,7 +313,7 @@ button[type="submit"] {
 }
 
 .mobile-nav-toggle[aria-expanded="true"] {
-    background: url('close-icon.svg') no-repeat;
+    background: url('hamburger_close.png') no-repeat;
 }
 
 @media (min-width: 800px) {
