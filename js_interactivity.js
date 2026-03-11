@@ -1,5 +1,9 @@
 // JavaScript for mobile navigation toggle
 
+const navToggle = document.querySelector(".mobile-nav-toggle");
+const primaryNav = document.querySelector(".primary-navigation");
+const navLinks = document.querySelectorAll(".primary-navigation a");
+
 navToggle.addEventListener('click', () => {
     const visibility = primaryNav.getAttribute('data-visible');
 
