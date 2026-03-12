@@ -93,3 +93,28 @@ contactForm.addEventListener('input', (e) => {
     if (e.target.id === 'email') emailErr.textContent = '';
     if (e.target.id === 'message') msgErr.textContent = '';
 });
+
+// FAQs section
+
+const accordionBtns = document.querySelectorAll(".accordion-title")
+
+accordionBtns.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    // Check if the clicked button is already expanded
+    const isExpanded = btn.getAttribute("aria-expanded") === "true";
+
+    // Loop through all buttons to close them (Mutual Exclusivity)
+    accordionBtns.forEach((otherBtn) => {
+      otherBtn.setAttribute("aria-expanded", "false");
+      const contentId = otherBtn.getAttribute("aria-controls");
+      document.getElementById(contentId).classList.add("hidden");
+    });
+
+    // If it was NOT open, open it now
+    if (!isExpanded) {
+      btn.setAttribute("aria-expanded", "true");
+      const targetId = btn.getAttribute("aria-controls");
+      document.getElementById(targetId).classList.remove("hidden");
+    }
+  });
+});
