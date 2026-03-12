@@ -47,7 +47,7 @@ backToTopButton.addEventListener('click', () => {
 // JavaScript for contact form validation ** a little bit of chatgpt was used for this since i was a little confused
 
 const contactForm = document.querySelector('#contactForm');
-const successMsg = document.getElementById('#formSuccess');
+const successMsg = document.querySelector('#formSuccess');
 
 const nameErr = document.querySelector('#nameError');
 const emailErr = document.querySelector('#emailError');
@@ -88,7 +88,7 @@ contactForm.addEventListener('submit', (event) => {
     }
 });
 
-contactForm.addEventListener('input', () => {
+contactForm.addEventListener('input', (e) => {
     if (e.target.id === 'fullname') nameErr.textContent = '';
     if (e.target.id === 'email') emailErr.textContent = '';
     if (e.target.id === 'message') msgErr.textContent = '';
