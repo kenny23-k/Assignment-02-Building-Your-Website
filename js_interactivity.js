@@ -29,7 +29,7 @@ navLinks.forEach(link => {
 const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
+    if (window.scrollY > window.innerHeight * 0.25) {
         backToTopButton.classList.add("show");
     } else {
         backToTopButton.classList.remove("show");
