@@ -28,6 +28,8 @@ navLinks.forEach(link => {
 // JavaScript for back to top button
 const backToTopButton = document.getElementById('backToTop');
 
+if (backToTopButton) {
+
 window.addEventListener('scroll', () => {
     if (window.scrollY > 0) {
         backToTopButton.classList.add("show");
@@ -43,6 +45,7 @@ backToTopButton.addEventListener('click', () => {
     });
 });
 
+}
 
 // JavaScript for contact form validation ** a little bit of chatgpt was used for this since i was a little confused
 
