@@ -26,11 +26,11 @@ navLinks.forEach(link => {
 
 
 // JavaScript for back to top button
-const backToTopButton = document.getElementById('#backToTop');
+const backToTopButton = document.getElementById('backToTop');
 
 window.addEventListener('scroll', () => {
     if (window.scrollY > 300) {
-        backToTopButton.classicList.add("show");
+        backToTopButton.classList.add("show");
     } else {
         backToTopButton.classList.remove("show");
     }
