@@ -23,3 +23,22 @@ navLinks.forEach(link => {
         navToggle.setAttribute('aria-expanded', false);
     });
 });
+
+
+// JavaScript for back to top button
+const backToTopButton = document.getElementById('#backToTop');
+
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopButton.classicList.add("show");
+    } else {
+        backToTopButton.classList.remove("show");
+    }
+});
+
+backToTopButton.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
