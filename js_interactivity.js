@@ -56,40 +56,42 @@ const nameErr = document.getElementById('nameError');
 const emailErr = document.getElementById('emailError');
 const msgErr = document.getElementById('messageError');
 
-contactForm.addEventListener('submit', (event) => {
-    event.preventDefault();
+if (contactForm) {
+    contactForm.addEventListener('submit', (event) => {
+        event.preventDefault();
 
-    const name = document.getElementById('fullname');
-    const email = document.getElementById('email');
-    const message = document.getElementById('message');
+        const name = document.getElementById('fullname');
+        const email = document.getElementById('email');
+        const message = document.getElementById('message');
 
-    nameErr.textContent = '';
-    emailErr.textContent = '';
-    msgErr.textContent = '';
-    successMsg.classList.add('hidden');
+        nameErr.textContent = '';
+        emailErr.textContent = '';
+        msgErr.textContent = '';
+        successMsg.classList.add('hidden');
 
-    let isValid = true;
+        let isValid = true;
 
-    if (name.value.trim() === '') {
-        nameErr.textContent = 'Please enter your name.';
-        isValid = false;
-    }
+        if (name.value.trim() === '') {
+            nameErr.textContent = 'Please enter your name.';
+            isValid = false;
+        }
 
-    if (email.validity.typeMismatch || email.value.trim() === '') {
-        emailErr.textContent = 'Please enter a valid email address.';
-        isValid = false;
-    }
+        if (email.validity.typeMismatch || email.value.trim() === '') {
+            emailErr.textContent = 'Please enter a valid email address.';
+            isValid = false;
+        }
 
-    if (message.value.length < 10) {
-        msgErr.textContent = 'Please enter a message with at least 10 characters.';
-        isValid = false;
-    }
+        if (message.value.length < 10) {
+            msgErr.textContent = 'Please enter a message with at least 10 characters.';
+            isValid = false;
+        }
 
-    if (isValid) {
-        successMsg.classList.remove('hidden');
-        contactForm.reset();
-    }
-});
+        if (isValid) {
+            successMsg.classList.remove('hidden');
+            contactForm.reset();
+        }
+    });
+}
 
 contactForm.addEventListener('input', (e) => {
     if (e.target.id === 'fullname') nameErr.textContent = '';
