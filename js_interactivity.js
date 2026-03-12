@@ -91,13 +91,14 @@ if (contactForm) {
             contactForm.reset();
         }
     });
-}
+
 
 contactForm.addEventListener('input', (e) => {
     if (e.target.id === 'fullname') nameErr.textContent = '';
     if (e.target.id === 'email') emailErr.textContent = '';
     if (e.target.id === 'message') msgErr.textContent = '';
 });
+}
 
 // FAQs section **used chat gpt to help me here
 const accordionBtns = document.querySelectorAll(".accordion-title")
