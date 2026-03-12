@@ -214,10 +214,11 @@ section {
 }
 
 .paragraph-page-two p{
-    width: 90%;
+    width: 65%;
     color: white;
     text-align: left;
     align-items: left;
+    margin-top: 0;
     margin: 0 0 1rem 0;
     padding: 0 1rem;
     box-sizing: border-box;
