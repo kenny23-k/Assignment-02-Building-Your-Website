@@ -32,15 +32,17 @@
     
         <section class="contact-form-section">
             <h2>Send a Message</h2>
-            <form action="/submit-form" method="post">
+            <form id="contactForm" action="/submit-form" method="post" novalidate>
                 <ul>
                     <li>
                         <label for="fullname">Name:</label>
                         <input type="text" id="fullname" name="fullname" placeholder="Your Name" required />
+                        <span id="nameError" class="error-msg" aria-live="polite"></span>
                     </li>
                     <li>
                         <label for="email">Email:</label>
                         <input type="email" id="email" name="email" placeholder="cafe@example.com" required />
+                        <span id="emailError" class="error-msg" aria-live="polite"></span>
                     </li>
                     <li>
                         <label for="urgency"> How important is it? (1-5):</label>
@@ -49,11 +51,13 @@
                     <li>
                         <label for="message">Your Message:</label>
                         <textarea id="message" name="message" rows="5" required></textarea>
+                        <span id="messageError" class="error-msg" aria-live="polite"></span>
                     </li>
                     <li>
                         <button type="submit">Submit</button>
                     </li>
                 </ul>
+                <div id="forSuccess" class="success-msg hidden"> Thanks! We'll get back to you soon!</div>
             </form>
         </section>
     </main>

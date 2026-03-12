@@ -285,6 +285,28 @@ button[type="submit"] {
     cursor: pointer;
 }
 
+/* adding error messages for the form */
+
+.error-msg {
+    color: red;
+    font-size: 0.85rem;
+    margin-top: 0.25rem;
+    display: block;
+}
+
+.success-msg {
+    color: green;
+    font-weight: bold;
+    text-align: center;
+    padding: 1rem;
+    background: #f0fdf4;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+.hidden {
+    display: none;
+}
 
 /* hamburger navbar section */
 
