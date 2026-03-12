@@ -213,6 +213,8 @@ section {
 
 .paragraph-page-two p {
     width: 100%;
+    color: white;
+    align-items: left;
     margin: 0 0 1rem 0;
     padding: 0 1rem;
     box-sizing: border-box;
