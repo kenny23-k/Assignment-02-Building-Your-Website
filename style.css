@@ -196,7 +196,8 @@ section {
     align-items: center;
     gap: 20px;
     width: 100%;                      
-    margin: 30px auto;       
+    margin: 30px auto;
+    margin-bottom: 0;       
     padding: 100px 50px;   
 }
 
@@ -211,10 +212,10 @@ section {
     border-radius: 5px;
 }
 
-.paragraph-page-two p {
+.paragraph-page-two p{
     width: 100%;
     color: white;
-    align-items: left;
+    text-align: left;
     margin: 0 0 1rem 0;
     padding: 0 1rem;
     box-sizing: border-box;
