@@ -203,6 +203,7 @@ section {
 
 .hero-page-two h2{
     font-size: 60pt;
+    margin-bottom: 0;
 }
 
 .box{
@@ -213,9 +214,10 @@ section {
 }
 
 .paragraph-page-two p{
-    width: 100%;
+    width: 90%;
     color: white;
     text-align: left;
+    align-items: left;
     margin: 0 0 1rem 0;
     padding: 0 1rem;
     box-sizing: border-box;
