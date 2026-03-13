@@ -123,3 +123,49 @@ accordionBtns.forEach((btn) => {
         }
     });
 });
+
+// this is for the api weather, i used a bit of chat gpt to understand better what i was doing
+
+async function getCafeWeather() {
+    const statusElement = document.querySelector("#weather-status");
+    const dataContainer = document.querySelector("#weather-data");
+    const tempElement = document.querySelector("#temp");
+    const suggestionElement = document.querySelector("#weather-suggestion");
+
+    //local latitude and longitude
+    const apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=45.42&longitude=-75.69&current_weather=true";
+
+    try {
+        // Fetch request
+        const response = await fetch(apiUrl);
+
+        // Is the response ok
+        if (!response.ok) {
+            throw new Error("Cloudy with a chance of errors! (Status: ${response.status})")
+
+        }
+
+        // JSON data
+        const data = await response.json();
+        const currentTemp = data.current_weather.temperature;
+
+        // Display data
+        statusElement.classList.add("hidden");
+        dataContainer.classList.remove("hidden")
+        tempElement.textContent = currentTemp;
+
+        // Logic for Cafe Shop
+        if (currentTemp > 20) {
+            suggestionElement.textContent = "Its a beautiful day to visit us!"
+        } else {
+            suggestionsElement.textContent = "A bit cold, come warm up with us!"
+        }
+    } catch (error) {
+        // Errors
+        console.error("Weather Fetch Failed:", error);
+        statusElement.textContent = "We couldnt load the weather right now, but come visit us anyways!";
+        statusElement.computedStyleMap.color = "red";
+    }
+}
+
+getCafeWeather();
