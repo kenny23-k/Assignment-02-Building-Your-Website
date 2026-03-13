@@ -127,10 +127,8 @@ accordionBtns.forEach((btn) => {
 // this is for the api weather, i used a bit of chat gpt to understand better what i was doing
 
 async function getCafeWeather() {
-    const statusElement = document.querySelector("#weather-status");
-    const dataContainer = document.querySelector("#weather-data");
-    const tempElement = document.querySelector("#temp");
-    const suggestionElement = document.querySelector("#weather-suggestion");
+    const weatherSpan = document.querySelector("#header-weather");
+    
 
     //local latitude and longitude
     const apiUrl = "https://api.open-meteo.com/v1/forecast?latitude=45.42&longitude=-75.69&current_weather=true";
@@ -141,7 +139,7 @@ async function getCafeWeather() {
 
         // Is the response ok
         if (!response.ok) {
-            throw new Error("Cloudy with a chance of errors! (Status: ${response.status})")
+            throw new Error(`HTTP error! (Status: ${response.status})`)
 
         }
 
@@ -150,9 +148,7 @@ async function getCafeWeather() {
         const currentTemp = data.current_weather.temperature;
 
         // Display data
-        statusElement.classList.add("hidden");
-        dataContainer.classList.remove("hidden")
-        tempElement.textContent = currentTemp;
+        weatherSpan.textContent = `| ${temp}°C`
 
         // Logic for Cafe Shop
         if (currentTemp > 20) {
@@ -162,9 +158,8 @@ async function getCafeWeather() {
         }
     } catch (error) {
         // Errors
-        console.error("Weather Fetch Failed:", error);
-        statusElement.textContent = "We couldnt load the weather right now, but come visit us anyways!";
-        statusElement.computedStyleMap.color = "red";
+        console.error("Header Weather Fetch Failed:", error);
+        weatherSpan.textContent = "We couldnt load the weather right now, but come visit us anyways!";
     }
 }
 

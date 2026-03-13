@@ -493,3 +493,18 @@ button[type="submit"] {
 .accordion-content.hidden {
     display: none;
 }
+
+/* Weather API */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    font-size: 1.5rem;
+}
+
+.header-weather {
+    font-size: 1rem;
+    font-weight: normal;
+    color:#B87333
+}
