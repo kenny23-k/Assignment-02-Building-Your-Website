@@ -148,14 +148,8 @@ async function getCafeWeather() {
         const currentTemp = data.current_weather.temperature;
 
         // Display data
-        weatherSpan.textContent = `| ${temp}°C`
-
-        // Logic for Cafe Shop
-        if (currentTemp > 20) {
-            suggestionElement.textContent = "Its a beautiful day to visit us!"
-        } else {
-            suggestionsElement.textContent = "A bit cold, come warm up with us!"
-        }
+        weatherSpan.textContent = `| ${currentTemp}°C`
+        
     } catch (error) {
         // Errors
         console.error("Header Weather Fetch Failed:", error);
