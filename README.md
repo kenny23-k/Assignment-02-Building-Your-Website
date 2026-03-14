@@ -40,6 +40,30 @@ Following assignement 2, I made changes to the website:
 7. Added text to About Page
 8. Made sure theres a live page
 
+For assignement 3, these are the features i added:
+
+1. Responsive naviguation with hamburger menu
+
+I made the links to the other pages more discreet on smaller devices like a phone, using a colapseble type of navigatiion menu
+
+2. Form validaiton with error messages
+
+I updated the form I had, but made it so that whenever a user would want to submit their message without the proper requirements, they would get a reminder in red below
+
+3. Back to the top button
+
+I made a back to the top bottom that appears when a user scroll down on a page, once clicked it brings them to the top of the page smoothly
+
+4. Accordion FAQ
+
+I made a FAQ section in the About Page, I made it using the accordion style, its very smooth and easy to use
+
+5. Weather API
+
+I added a weather API, its on the left side of the page, besides the cafe wordmark, this helps users know what meal / drink to get depending on the weather
+
+For these updates, I had chat gpt help me a little bit, most of the case i knew what to do, but not how to do it, which is how i used chat gpt, I could tell myself the process of the code but not how to write in coding langague. I made comments in the coding pages showing which parts i had chat gpt assist me.
+
 Image credits:
 
 #https://ca.pinterest.com/pin/4592756948935887616/
